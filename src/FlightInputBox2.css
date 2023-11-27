@@ -1,0 +1,449 @@
+/* FILEPATH: /Users/apple/Desktop/MakeMyTrip-Clone/client/src/components/FlightInputBox/FlightInputBox.scss */
+.input-box-wrapper-flights {
+	width: 100%;
+	padding-top: 7rem;
+}
+
+.input-box {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 50%;
+	height: 50%;
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	z-index: 9999;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+}
+
+.modal .cowork_header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: x-large;
+	font-weight: bold;
+}
+
+
+.modal .cowork_container {
+	position: absolute;
+	top: 100px;
+	left: 0;
+	width: 100%;
+	height: calc(100% - 150px); 
+	display: flex;
+	padding: 20px;
+	gap: 10px;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	overflow-y: auto; 
+  }
+
+.modal .cowork_container .cowork {
+	
+	position: relative;
+	width: 20%;
+	height: 10%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid rgb(204, 180, 180);
+	border-radius: 10px;
+	font-size: x-large;
+	font-weight: 800;
+	overflow-y: auto;
+	cursor: pointer;
+}
+
+
+
+.modal .close_button {
+	position: fixed;
+	bottom: 10px;
+	padding: 10px;
+	height: 60px;
+	width: 150px;
+	cursor: pointer;
+	background: var(--color-btn-primary-bg);
+	color: var(--color-btn-primary-text);
+	border-radius: 10px;
+	color: #fff;
+	font-size: 30px;
+	font-weight: 600;
+
+  }
+
+.input-box2 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.search_city {
+	position: absolute;
+	/* top: 30%; */
+	border: 10px solid black;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	z-index: 999;
+}
+
+.city_dropDown {
+	position: absolute;
+	top: 60%;
+	left: 0;
+	width: 100%;
+	height: 50%;
+	background: #fff;
+	z-index: 999;
+	border-radius: 6px;
+	font-size: x-large;
+	font-weight: 800;
+}
+
+.input-wrapper {
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	background: #fff;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	position: relative;
+}
+
+.input {
+	border-radius: 10px;
+	margin: 0 30px;
+	padding: 40px 0;
+}
+
+.top-sec {
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 1rem;
+	margin: 10px 0;
+}
+
+.top-sec > div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	padding: 4px 8px;
+	border-radius: 10px;
+}
+
+.top-sec > div input {
+	cursor: pointer;
+}
+
+.top-sec > div label {
+	font-size: 0.9rem;
+	cursor: pointer;
+}
+
+.top-sec .checked {
+	background: #e3f2ff;
+	font-weight: 600;
+}
+
+.bottom-sec {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	width: 100%;
+	height: 120px;
+	border: 1px solid #e7e7e7;
+	border-radius: 10px;
+	margin-top: 1rem;
+	position: relative;
+}
+
+.bottom-sec .arrows {
+	position: absolute;
+	top: 50%;
+	left: 20%;
+	transform: translate(-50%, -50%);
+	font-size: 2.2rem;
+	padding: 8px;
+	background: #fff;
+	color: var(--color-btn);
+	border-radius: 100%;
+	box-shadow: 0 0 20px #3f3f3f57;
+	z-index: 99;
+	cursor: pointer;
+}
+
+.bottom-sec .from,
+.bottom-sec .to:hover {
+	background: #e3f2ff;
+}
+
+.bottom-sec > div {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	border-right: 1px solid #e7e7e7;
+	padding-left: 1rem;
+	position: relative;
+	height: 100%;
+	background-color: inherit;
+	cursor: pointer;
+}
+
+.bottom-sec > div:last-child {
+	border: none;
+}
+
+.bottom-sec > div label {
+	margin: 5px 0;
+	position: absolute;
+	top: 0;
+	left: 1rem;
+	font-weight: 500;
+	color: #2b2b2b;
+	margin-left: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+}
+
+.bottom-sec > div .icon {
+	font-size: 20px;
+}
+
+.bottom-sec > div .disabled-text {
+	position: absolute;
+	left: 10%;
+	height: 100%;
+	width: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 15px;
+	font-weight: 600;
+	color: #424242ad;
+}
+
+.bottom-sec > div .date-input {
+	color: #ffffff00 !important;
+	background: transparent;
+	z-index: inherit;
+}
+
+.bottom-sec > div .date {
+	position: absolute;
+	top: 50%;
+	left: 8%;
+	transform: translate(0%, -50%);
+	height: 60%;
+	width: 180px;
+	z-index: 999;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	background: #fff;
+}
+
+.bottom-sec > div .date > div {
+	display: flex;
+	align-items: baseline;
+	justify-content: center;
+	gap: 10px;
+	font-size: 1rem;
+}
+
+.bottom-sec > div .date > div span {
+	font-size: 2.2rem;
+	font-weight: 700;
+}
+
+.bottom-sec > div .date > div p {
+	font-size: 1.2rem;
+}
+
+.bottom-sec > div input {
+	height: 100%;
+	width: 90%;
+	margin: auto;
+	outline: none;
+	border: none;
+	font-size: xx-large;
+	font-weight: 700;
+	text-transform: capitalize;
+	background: transparent;
+	margin-left: 1rem;
+	cursor: pointer;
+}
+
+.bottom-sec > div > span {
+	margin: 5px 0;
+	position: absolute;
+	bottom: 10px;
+	left: 1rem;
+	font-weight: 500;
+	color: #2b2b2b;
+	margin-left: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+}
+
+.btm {
+	height: 45px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 10px 0 0 0;
+}
+
+.btm .sec {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	height: 100%;
+}
+
+.btm .sec > span {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 0.7rem;
+	font-weight: 700;
+	width: 60px;
+	height: 100%;
+}
+
+.btm .sec > div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	gap: 5px;
+	padding: 4px 8px;
+	background: #6464641a;
+}
+
+.btm .sec > div input {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.btm .sec > div label {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 0.7rem;
+	cursor: pointer;
+}
+
+.btm .sec > div:nth-child(2) {
+	border-radius: 5px 0 0 5px;
+}
+
+.btm .sec > div:last-child {
+	border-radius: 0 5px 5px 0;
+}
+
+.btm .sec .checked {
+	background: #e3f2ff;
+	font-weight: 600;
+}
+
+.btm .sec .fares-label {
+	width: 70px;
+	height: 100%;
+}
+
+.tranding {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	height: 100%;
+}
+
+.tranding > span {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 0.7rem;
+	font-weight: 700;
+	height: 100%;
+}
+
+.tranding > div {
+	font-size: 0.8rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 7px 10px;
+	background: #6464641a;
+	border-radius: 5px;
+	color: #3b3b3b;
+}
+
+.tranding > div .icon {
+	color: var(--color-btn);
+	margin: 0 4px;
+}
+
+.tranding > div span {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 12px;
+}
+
+.submit-btn {
+	position: absolute;
+	bottom: -25px;
+	font-size: 1.7rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	outline: none;
+	border: none;
+	padding: 8px 50px;
+	border-radius: 100px;
+	background: var(--color-btn-primary-bg);
+	color: var(--color-btn-primary-text);
+	cursor: pointer;
+	transition: transform 0.3s ease;
+}
+
+.submit-btn:hover {
+	transform: scale(1.05);
+}
+
+.submit-btn:active {
+	transform: scale(0.95);
+}
+
+
